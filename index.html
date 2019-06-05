@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+	<div class="container pt-5 pb-5 dor">
+		<div class="d-flex">
+			<div class="pl-5 mr-5">
+				<img src="door.png" width="400">
+			</div>
+			<div class=" pr-5">
+				<img src="door2.png" width="260">
+			</div>
+			<div class=" pr-5">
+				<img src="door3.png" width="260">
+			</div>
+		</div>
+	</div>	
+	<div class="bg back" style="height: 660px;display: none;">
+		<div class="text-white">
+			<h1>Помоги Гарри найти его метлу,плащ и палочку! Надо заработать 3 очка!</h1>
+		</div>
+		<div class="d-flex">
+			<h1 class="ochko text-white pl-5">0</h1>
+			<h1 class="text-white pl-2">OCHKO</h1>
+		</div>
+		<div class="pl-5">
+			<button type="button" class="btn btn-success but">
+				Exit
+			</button>
+		</div>
+		<div>
+			<img src="gun.png" width="50" style="margin-top: 400px; position: absolute;margin-left: 320px" class="gun">
+			<img src="mantiya.png" width="50" style="margin-top: 300px; position: absolute; margin-left: 350px" class="mantiya">
+			<img src="metla.png"width="50" style="margin-top: 200px;position: absolute;margin-left:250px" class="metla">
+			<img src="palochka.png"width="50" style="margin-top: 320px;position: absolute;margin-left:280px" class="palochka">
+			<img src="ring.png"width="30" style="margin-top: 320px;position: absolute;margin-left:550px" class="ring">
+		</div>
+	</div>
+	<script type="text/javascript">
+		let polka = 0
+		document.querySelector(".dor").onclick = function(){
+			alert("Добро пожаловать в Хогвартс!");
+			document.querySelector(".dor").style.display = "none";
+			document.querySelector(".back").style.display = "block";
+		}
+		document.querySelector(".gun").onclick= function(){
+			document.querySelector(".gun").style.display = "none";
+		}
+		document.querySelector(".mantiya").onclick= function(){
+			document.querySelector(".mantiya").style.display = "none";
+			polka= polka +1;
+			document.querySelector(".ochko").innerHTML = polka
+		}
+		document.querySelector(".metla").onclick= function(){
+			document.querySelector(".metla").style.display = "none";
+			polka= polka +1;
+			document.querySelector(".ochko").innerHTML = polka
+		}
+		document.querySelector(".ring").onclick= function(){
+			document.querySelector(".ring").style.display = "none";
+		}
+		document.querySelector(".palochka").onclick= function(){
+			document.querySelector(".palochka").style.display = "none";
+			polka = polka +1;
+			document.querySelector(".ochko").innerHTML = polka
+		}
+		document.querySelector(".but").onclick= function(){
+			document.querySelector(".dor").style.display = "block";
+			document.querySelector(".back").style.display = "none";
+		}
+
+	</script>
+</body>
+
+</html>
